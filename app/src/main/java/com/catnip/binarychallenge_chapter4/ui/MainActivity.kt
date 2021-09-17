@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity(), IGame {
 
     private fun initialState() {
         (user.heroes + computer.heroes).forEach { it.background = null }
-        binding.versus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.img_vs))
+        binding.ivVersus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.img_vs))
         isGameFinished = false
     }
 
@@ -124,7 +124,7 @@ class MainActivity : AppCompatActivity(), IGame {
         when {
             (user.choice + 1) % 3 == computer.choice -> {
                 Log.i(TAG, "decideWinner: Player 2 Win")
-                binding.versus.setImageDrawable(
+                binding.ivVersus.setImageDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.img_player2_win
@@ -133,7 +133,7 @@ class MainActivity : AppCompatActivity(), IGame {
             }
             user.choice == computer.choice -> {
                 Log.i(TAG, "decideWinner: Draw")
-                binding.versus.setImageDrawable(
+                binding.ivVersus.setImageDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.img_draw
@@ -142,7 +142,7 @@ class MainActivity : AppCompatActivity(), IGame {
             }
             else -> {
                 Log.i(TAG, "decideWinner: Player 1 Win")
-                binding.versus.setImageDrawable(
+                binding.ivVersus.setImageDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.img_player1_win
