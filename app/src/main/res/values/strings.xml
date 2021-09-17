@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Binary Challenge - Chapter 4</string>
+    <string name="label_tv_player">Pemain</string>
+    <string name="label_tv_computer">Komputer</string>
 </resources>
